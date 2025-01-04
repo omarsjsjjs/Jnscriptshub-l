@@ -4,12 +4,12 @@ screenGui.Name = "MM2Menu"
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 screenGui.ResetOnSpawn = false -- Keep GUI when respawning
 
--- Execute the hidden script on initialization
+-- Execute the dragable gui script on initialization
 local success, err = pcall(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/omarsjsjjs/Dragableguiscript/refs/heads/main/Drag", true))()
 end)
 if not success then
-    warn("Failed to load hidden script: " .. tostring(err))
+    warn("Failed to load drag script: " .. tostring(err))
 end
 
 -- Create the Frame (menu)
